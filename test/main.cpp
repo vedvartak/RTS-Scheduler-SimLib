@@ -1,17 +1,10 @@
-
-#include<cstdio>
-#include<timer.h>
-
 #include <cstdio>
-#include <algorithm>
 #include <timer.h>
-#include <filesystem>
-#include<cmath>
 #include<taskmanager.h>
 #include<taskgenerator.h>
-#include<edf.h>
 #include<rma.h>
 #include<dma.h>
+#include<edf.h>
 #include<lst.h>
 
 using curr_scheduler=RMA;

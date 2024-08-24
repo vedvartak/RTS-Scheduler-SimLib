@@ -1,6 +1,12 @@
 # RTS-Scheduler-SimLib
 ## Introduction
-A simple RTS (Real-time system) priority-based scheduler simulation library in C++.
+A simple RTS (Real-time system) priority-based scheduler simulation library for periodic tasks in C++.
+## Features
+<ol>
+<li>Task Manager to create and manage task jobs.</li>
+<li>Task set generator to generate schedulable task set with zero starting phase.</li>
+<li>Inbuilt scheduling algorithms.</li>
+</ol>
 ## Inbuilt algorithms
 <ul>
 <li>RMA</li>

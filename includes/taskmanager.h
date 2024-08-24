@@ -17,6 +17,7 @@ private:
     size_t m_lastJob=0;
 public:
     static unsigned int i;
+    static unsigned int setIndexId(unsigned int i);
     // Task(/* args */)=default;
     std::string getname();
     float getStartT() const;

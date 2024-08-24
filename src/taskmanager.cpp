@@ -1,6 +1,12 @@
 #include<taskmanager.h>
 #include<iostream>
 unsigned int Task::i=0;
+unsigned int Task::setIndexId(unsigned int i)
+{
+    unsigned int temp=Task::i;
+    Task::i=i;
+    return temp;
+}
 std::string Task::getname()
 {
     return name;

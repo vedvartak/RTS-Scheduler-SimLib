@@ -23,6 +23,7 @@ TaskGenerator<scheduler_class>::TaskGenerator(/* args */)
 template <class scheduler_class>
 std::vector<Task> TaskGenerator<scheduler_class>::generate(unsigned int n)
 {
+    unsigned int oldIndex=Task::i;
     std::vector<Task> tasklist;
     float totalutilization=scheduler_class::schedulable_util(n);
     std::cout<<"util:"<<totalutilization<<" "<<((size_t)1-2)+1<<'\n';
@@ -87,6 +88,7 @@ std::vector<Task> TaskGenerator<scheduler_class>::generate(unsigned int n)
     }
     
     // printf("normal\n");
+    Task::setIndexId(oldIndex);
     return tasklist;
 }
 template <class scheduler_class>

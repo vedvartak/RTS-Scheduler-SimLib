@@ -1,4 +1,4 @@
-#include<dma.h>
+#include<algorithms/dma.h>
 #include<queue>
 #include<cstdio>
 #include<algorithm>

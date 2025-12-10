@@ -2,10 +2,10 @@
 #include <timer.h>
 #include<taskmanager.h>
 #include<taskgenerator.h>
-#include<rma.h>
-#include<dma.h>
-#include<edf.h>
-#include<lst.h>
+#include<algorithms/rma.h>
+#include<algorithms/dma.h>
+#include<algorithms/edf.h>
+#include<algorithms/lst.h>
 
 using curr_scheduler=RMA;
 #define USE_RANDOM_TASKS

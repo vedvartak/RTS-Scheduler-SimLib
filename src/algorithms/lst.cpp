@@ -1,4 +1,4 @@
-#include<lst.h>
+#include<algorithms/lst.h>
 #include<queue>
 #include<cstdio>
 #include<algorithm>

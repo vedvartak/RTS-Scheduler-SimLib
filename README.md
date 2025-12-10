@@ -7,27 +7,31 @@ A simple RTS (Real-time system) priority-based scheduler simulation library for 
 <li>Task set generator to generate schedulable task set with zero starting phase.</li>
 <li>Inbuilt scheduling algorithms.</li>
 </ol>
-## Inbuilt algorithms
+
+### Inbuilt algorithms
 <ul>
-<li>RMA</li>
-<li>DMA</li>
-<li>EDF</li>
-<li>LST</li>
+<li>RMA - Rate monotonic algorithm</li>
+<li>DMA - Deadline monotonic algorithm</li>
+<li>EDF - Earliest deadline first</li>
+<li>LST - Least slack time</li>
 </ul>
 
-## How to compile
-To use this library you only require implimentation files in [src](src/) and header files in [includes](includes/).
-The library can be compiled using any prefered C++ compiler e.g., GCC, MSVC, Clang etc. You just need to compile implimentation files in [src](src/) along with your project with [includes](includes/) folder added as include folder using compiler options ("-I {folder-path}" for GCC and Clang).
+## How to build
+This library uses [CMake](https://cmake.org/) based build system.
+To build with default configuration following commands can be ran from root directory of the project.
 ```sh
-gcc {path-to-src}/* {path-to-your-src-files} -I {path-to-includes}
+# To configure
+cmake -S . -B build
+# To build
+cmake --build build
 ```
-If required, you can compile the source code into static library that way you will only have to link it with [includes](includes/) folder added as include folder while compiling your project.
+Alternatively, you can use generator specific methods to build. (E.g. By opening project solution in case of Visual Studio)
 ## How to use
-Once you add [includes](includes/) folder as include folder for your compiler simply include header files that you require into your source files.
+Once you add [includes](includes/) folder as include folder for your project and linked to the compiled static library simply include header files that you require into your source files.
 E.g.,
 ```c++
 #include <taskmanager.h>
-#include <rma.h>
+#include <algorithms/rma.h>
 ```
 ## Usage sample
 ```c++
@@ -35,7 +39,7 @@ E.g.,
 #include <iostream>
 #include<taskmanager.h>
 #include<taskgenerator.h>
-#include<rma.h>
+#include<algorithms/rma.h>
 
 int main()
 {
